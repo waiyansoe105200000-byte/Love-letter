@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Love ❤️</title>
+<title>💖 For My Princess 💖</title>
 
 <style>
 *{
@@ -14,110 +14,122 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
+background:linear-gradient(135deg,#ffb6d9,#ffd6ec,#fff0f7);
 overflow:hidden;
 }
 
-.login,.message{
+.login{
+width:350px;
 background:white;
 padding:30px;
 border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.2);
 text-align:center;
-width:90%;
-max-width:450px;
+box-shadow:0 0 25px rgba(255,105,180,.4);
+z-index:10;
+}
+
+h1{
+color:#ff4f8b;
+margin-bottom:20px;
 }
 
 input{
 width:100%;
 padding:12px;
 margin:10px 0;
-border-radius:10px;
-border:1px solid #ccc;
-font-size:18px;
+border-radius:12px;
+border:1px solid #ff9ac5;
+font-size:16px;
 }
 
 button{
-padding:12px 25px;
+width:100%;
+padding:12px;
 border:none;
-background:#ff4d6d;
+border-radius:12px;
+background:#ff4f8b;
 color:white;
 font-size:18px;
-border-radius:10px;
 cursor:pointer;
+transition:.3s;
 }
 
 button:hover{
-background:#ff1744;
+transform:scale(1.05);
+background:#ff2f75;
 }
 
-.message{
+#message{
 display:none;
-animation:fade 1s;
-}
-
-@keyframes fade{
-from{opacity:0;transform:scale(.8);}
-to{opacity:1;transform:scale(1);}
-}
-
-h2{
-color:#ff1744;
-margin-bottom:20px;
-}
-
-p{
-font-size:18px;
-line-height:1.8;
+padding:20px;
+width:90%;
+max-width:700px;
+background:white;
+border-radius:20px;
+box-shadow:0 0 30px pink;
+line-height:2;
+font-size:20px;
 white-space:pre-line;
 }
 
 .heart{
 position:fixed;
-color:red;
-font-size:25px;
-animation:fall 6s linear infinite;
+top:-30px;
+color:#ff4f8b;
+animation:fall linear infinite;
 }
 
 @keyframes fall{
-0%{
-transform:translateY(-100px);
-opacity:1;
-}
-100%{
-transform:translateY(110vh);
-opacity:0;
-}
+0%{transform:translateY(-50px);}
+100%{transform:translateY(110vh);}
 }
 </style>
 </head>
 
 <body>
 
-<div class="login" id="login">
-<h2>❤️ Login ❤️</h2>
+<div class="login" id="loginBox">
+<h1>💖 Welcome 💖</h1>
 
 <input id="user" placeholder="Username">
 
 <input id="pass" type="password" placeholder="Password">
 
-<button onclick="login()">Login</button>
+<button onclick="login()">Login ❤️</button>
 
 </div>
 
-<div class="message" id="msg">
+<div id="message">
+<h2>💖 Welcome My Princess 💖</h2>
+<p id="typing"></p>
 
-<h2>Welcome My Princess ❤️</h2>
+<br>
 
-<p id="text"></p>
+<button id="next" style="display:none;">🌹 Continue 🌹</button>
 
 </div>
 
 <script>
+
+const text=`ခလေးမလေးရေ... 🥺
+
+ကိုယ်သဝန်တိုပြီး ပြောမိသွားတာ တကယ်တောင်းပန်ပါတယ်။
+
+ကိုယ်ပြောလိုက်တဲ့စကားတွေကြောင့် မင်းစိတ်ထိခိုက်သွားရင် ကိုယ်တကယ်စိတ်မကောင်းပါဘူး။
+
+ကိုယ်သဝန်တိုတာက မင်းကိုတန်ဖိုးထားလို့၊ ဆုံးရှုံးရမှာကြောက်လို့ပါ။
+
+ဒါပေမယ့် အဲ့လိုစိတ်နဲ့ မင်းကိုနာကျင်အောင် မပြောသင့်ဘူးဆိုတာ ကိုယ်သိပါတယ်။
+
+ဒီတစ်ခါတော့ ကိုယ့်ကိုခွင့်လွှတ်ပေးပါနော်။
+
+နောက်ဆို စိတ်ကိုထိန်းပြီး မင်းကိုနားလည်အောင် ပိုကြိုးစားပါ့မယ်။
+
+ကိုယ်က မင်းအပြုံးလေးကိုပဲ ပြန်မြင်ချင်တာပါ။ 🤍`;
 
 function login(){
 
@@ -126,51 +138,38 @@ let p=document.getElementById("pass").value;
 
 if(u=="ခလေးမ" && p=="Lugyi"){
 
-document.getElementById("login").style.display="none";
+document.getElementById("loginBox").style.display="none";
+document.getElementById("message").style.display="block";
 
-document.getElementById("msg").style.display="block";
-
-typeWriter();
-
-hearts();
+type();
 
 }else{
 
-alert("Username (သို့) Password မှားနေပါတယ် 🥺");
+alert("Username သို့မဟုတ် Password မှားနေပါတယ် 🥺");
 
 }
 
 }
-
-const message=`ခလေးမလေးရေ... 🥺
-
-ကိုယ်သဝန်တိုပြီး ပြောမိသွားတာ တကယ်တောင်းပန်ပါတယ်။ ကိုယ်ပြောလိုက်တဲ့စကားတွေကြောင့် မင်းစိတ်ထိခိုက်သွားရင် ကိုယ်တကယ်စိတ်မကောင်းပါဘူး။
-
-ကိုယ်သဝန်တိုတာက မင်းကိုတန်ဖိုးထားလို့၊ ဆုံးရှုံးရမှာကြောက်လို့ပါ။ ဒါပေမယ့် အဲ့လိုစိတ်နဲ့ မင်းကိုနာကျင်အောင် မပြောသင့်ဘူးဆိုတာ ကိုယ်သိပါတယ်။
-
-ဒီတစ်ခါတော့ ကိုယ့်ကိုခွင့်လွှတ်ပေးပါနော်။ နောက်ဆို စိတ်ကိုထိန်းပြီး မင်းကိုနားလည်အောင် ပိုကြိုးစားပါ့မယ်။
-
-ကိုယ်က မင်းအပြုံးလေးကိုပဲ ပြန်မြင်ချင်တာပါ။ 🤍
-
-❤️ I Love You Forever ❤️`;
 
 let i=0;
 
-function typeWriter(){
+function type(){
 
-if(i<message.length){
+if(i<text.length){
 
-document.getElementById("text").innerHTML+=message.charAt(i);
+document.getElementById("typing").innerHTML+=text.charAt(i);
 
 i++;
 
-setTimeout(typeWriter,50);
+setTimeout(type,45);
+
+}else{
+
+document.getElementById("next").style.display="block";
 
 }
 
 }
-
-function hearts(){
 
 setInterval(()=>{
 
@@ -184,17 +183,13 @@ h.style.left=Math.random()*100+"vw";
 
 h.style.fontSize=(20+Math.random()*25)+"px";
 
+h.style.animationDuration=(3+Math.random()*4)+"s";
+
 document.body.appendChild(h);
 
-setTimeout(()=>{
+setTimeout(()=>h.remove(),7000);
 
-h.remove();
-
-},6000);
-
-},300);
-
-}
+},250);
 
 </script>
 
