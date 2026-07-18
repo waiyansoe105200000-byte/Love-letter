@@ -1,0 +1,59 @@
+<!-- Part 2 : Love Effects -->
+
+<section class="love-box">
+  <h1>❤️ You Are My Favorite Person ❤️</h1>
+  <p>
+    မင်းနဲ့တွေ့ခဲ့တာက ငါ့အတွက် အမှတ်တရလေးတစ်ခုပါ။
+    မင်းပြုံးတဲ့အချိန်တိုင်း ပျော်ရွှင်မိတယ်။
+  </p>
+
+  <button onclick="showLove()">Click Me ❤️</button>
+
+  <div id="message"></div>
+</section>
+
+<div class="heart">❤️</div>
+<div class="heart">💗</div>
+<div class="heart">💖</div>
+
+<style>
+.love-box{
+  text-align:center;
+  padding:30px;
+  color:white;
+  font-family:sans-serif;
+}
+
+button{
+  background:#ff4d88;
+  color:white;
+  border:none;
+  padding:12px 25px;
+  border-radius:30px;
+  font-size:18px;
+}
+
+#message{
+  margin-top:20px;
+  font-size:22px;
+}
+
+.heart{
+  position:fixed;
+  bottom:-20px;
+  animation:up 5s infinite;
+  font-size:30px;
+}
+
+@keyframes up{
+  from{transform:translateY(0);}
+  to{transform:translateY(-100vh);}
+}
+</style>
+
+<script>
+function showLove(){
+ document.getElementById("message").innerHTML =
+ "💖 I Like You Forever 💖";
+}
+</script>
