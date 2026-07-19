@@ -3,172 +3,260 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Khay Lay ❤️</title>
+<title>❤️ For My Khay Lay ❤️</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Noto Sans Myanmar',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Noto Sans Myanmar',sans-serif;
 }
 
 body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
-    background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fbc2eb,#a18cd1);
-    background-size:400% 400%;
-    animation:bg 10s ease infinite;
+background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#fbc2eb,#a18cd1);
+background-size:400% 400%;
+animation:bgMove 10s infinite alternate;
+overflow-x:hidden;
+color:white;
+text-align:center;
 }
 
-@keyframes bg{
+@keyframes bgMove{
 0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
+100%{background-position:100% 50%;}
 }
 
-.card{
-    width:90%;
-    max-width:700px;
-    padding:35px;
-    background:rgba(255,255,255,.18);
-    backdrop-filter:blur(18px);
-    border-radius:25px;
-    text-align:center;
-    color:white;
-    box-shadow:0 0 30px rgba(255,255,255,.35);
-    animation:fade 2s;
+.container{
+width:90%;
+max-width:800px;
+margin:auto;
+padding:40px 20px;
 }
 
-@keyframes fade{
-from{opacity:0;transform:translateY(30px);}
-to{opacity:1;transform:translateY(0);}
+.photo{
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid white;
+box-shadow:0 0 35px rgba(255,255,255,.8);
+animation:zoom 2s infinite alternate;
+}
+
+@keyframes zoom{
+from{transform:scale(1);}
+to{transform:scale(1.05);}
 }
 
 h1{
-    font-size:32px;
-    margin-bottom:20px;
-    animation:pulse 2s infinite;
+margin-top:20px;
+font-size:35px;
 }
 
-@keyframes pulse{
-50%{transform:scale(1.05);}
-}
-
-p{
-    line-height:2;
-    font-size:18px;
-}
-
-.heart{
-    position:fixed;
-    color:#ff4d6d;
-    animation:float 8s linear infinite;
-    user-select:none;
-}
-
-@keyframes float{
-0%{
-transform:translateY(100vh) scale(.5);
-opacity:0;
-}
-20%{
-opacity:1;
-}
-100%{
-transform:translateY(-100px) scale(1.5);
-opacity:0;
-}
+.type{
+margin-top:25px;
+font-size:19px;
+line-height:2;
+background:rgba(255,255,255,.15);
+padding:20px;
+border-radius:20px;
+backdrop-filter:blur(12px);
 }
 
 button{
-    margin-top:25px;
-    padding:12px 28px;
-    border:none;
-    border-radius:50px;
-    background:#ff4d6d;
-    color:white;
-    font-size:18px;
-    cursor:pointer;
-    transition:.3s;
+margin-top:25px;
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:40px;
+background:#ff4d88;
+color:white;
+cursor:pointer;
+transition:.3s;
 }
 
 button:hover{
-    transform:scale(1.08);
+transform:scale(1.1);
 }
 
-#msg{
-    margin-top:20px;
-    display:none;
-    animation:fade 1s;
+.heart{
+position:fixed;
+top:-50px;
+color:#ff2d55;
+animation:fall linear forwards;
 }
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+
+#love{
+display:none;
+margin-top:25px;
+font-size:22px;
+font-weight:bold;
+color:#fff;
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="card">
-<h1>❤️ For My Khay Lay ❤️</h1>
+<div class="container">
 
-<p>
-မနေ့က ကိုယ်သဝန်တိုပြီး ပြောမိခဲ့တာတွေရှိရင်
-စိတ်မကောင်းမဖြစ်ပါနဲ့နော်...
+<img src="photo.jpg" class="photo">
 
-ကိုယ်မင်းကို မယုံလို့မဟုတ်ဘူး။
-မင်းက ကိုယ့်အတွက် အရမ်းအရေးကြီးလို့၊
-ဆုံးရှုံးရမှာ ကြောက်လို့ပါ။
+<h1>❤️ My Khay Lay ❤️</h1>
 
-အနေဝေးနေပေမယ့်
-ကိုယ့်ရဲ့ ဂရုစိုက်မှုကတော့
-တစ်နေ့မှ မလျော့သွားဘူး။
+<div class="type">
 
-မင်း ထမင်းစားပြီးလား...
-မင်း ပင်ပန်းနေလား...
-မင်း ပျော်နေလား...
+ခလေးမ...
 
-အဲ့ဒီအတွေးတွေနဲ့ပဲ
-ကိုယ်နေ့တိုင်း ဖြတ်သန်းနေပါတယ်။
+ကိုယ်အလုပ်များနေတဲ့ရက်တွေမှာ
+မင်းကို အချိန်အများကြီး မပေးနိုင်တာကို
+တကယ်စိတ်မကောင်းပါဘူး။
 
-ကိုယ်ချစ်လို့ ဂရုစိုက်တာပါ...
-ချုပ်ချယ်ချင်လို့ မဟုတ်ဘူးနော်... ❤️
-</p>
+အချိန်မပေးနိုင်တာက
+ဂရုမစိုက်တာ မဟုတ်ဘူးနော်။
 
-<button onclick="showLove()">
-❤️ Click Me ❤️
-</button>
+တာဝန်တွေအများကြီးကြားထဲမှာတောင်
+မင်းထမင်းစားပြီပြီလား....
+ပင်ပန်းနေလား...
+    နေကောင်းရဲ့လား....
+    ,ဆိုတဲ့အတွေးတွေက လူရီစိတ်ထဲအမြဲရှိတယ်
+    </div>
 
-<p id="msg">
-"ဘယ်လောက်အနေဝေးဝေး...
-ကိုယ့်နှလုံးသားကတော့
-မင်းနားမှာပဲ အမြဲရှိနေမှာပါ။ ❤️"
-</p>
+<button onclick="showLove()">❤️ Click Me ❤️</button>
 
+<div id="love">
+    ❤️
+
+    ခလေးမ...
+
+    ကိုယ်အလုပ်များနေလို့
+    မင်းကို အချိန်မပေးနိုင်တဲ့နေ့တွေ ရှိပေမယ့်...
+
+    မင်းကို ဂရုစိုက်တဲ့စိတ်က
+    ဘယ်တော့မှ မလျော့သွားဘူး။
+
+    ကိုယ်သဝန်တိုပြီး ပြောမိတာတွေရှိရင်
+    မင်းကို မယုံလို့မဟုတ်ဘူး။
+
+    မင်းကို အရမ်းတန်ဖိုးထားလို့
+    ဆုံးရှုံးရမှာ ကြောက်တဲ့စိတ်ကြောင့်ပါ။
+
+    အနေဝေးပေမယ့်
+    ကိုယ့်နှလုံးသားကတော့
+    မင်းနားမှာပဲ အမြဲရှိနေမှာပါ...
+
+    ❤️ I Love You ❤️
 </div>
 
 <script>
+
 function showLove(){
-document.getElementById("msg").style.display="block";
+document.getElementById("love").style.display="block";
 }
 
-function heart(){
-const h=document.createElement("div");
-h.className="heart";
-h.innerHTML="❤️";
-h.style.left=Math.random()*100+"vw";
-h.style.fontSize=(20+Math.random()*30)+"px";
-document.body.appendChild(h);
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(20+Math.random()*30)+"px";
+
+heart.style.animationDuration=(4+Math.random()*4)+"s";
+
+document.body.appendChild(heart);
 
 setTimeout(()=>{
-h.remove();
+heart.remove();
 },8000);
+
 }
 
-setInterval(heart,250);
+setInterval(createHeart,250);
+/* ===== Typewriter Effect ===== */
+
+const text = `
+ခလေးမ...
+
+ကိုယ်အလုပ်များလို့ အချိန်မပေးနိုင်တဲ့နေ့တွေ ရှိပေမယ့်...
+ကိုယ်မင်းကို မေ့နေတာ မဟုတ်ဘူး။
+
+ကိုယ့်စိတ်ထဲမှာ
+မင်းက အမြဲရှိနေတဲ့သူပါ။
+
+❤️
+`;
+
+let i = 0;
+
+const typeBox = document.querySelector(".type");
+
+typeBox.innerHTML = "";
+
+function typing(){
+
+if(i < text.length){
+
+typeBox.innerHTML += text.charAt(i);
+
+i++;
+
+setTimeout(typing,60);
+
+}
+
+}
+
+typing();
+
+
+/* ===== Sparkle Effect ===== */
+
+function sparkle(){
+
+const s=document.createElement("div");
+
+s.innerHTML="✨";
+
+s.style.position="fixed";
+
+s.style.left=Math.random()*100+"vw";
+
+s.style.top=Math.random()*100+"vh";
+
+s.style.fontSize=(10+Math.random()*20)+"px";
+
+s.style.pointerEvents="none";
+
+s.style.animation="fade 2s linear";
+
+document.body.appendChild(s);
+
+setTimeout(()=>{
+
+s.remove();
+
+},2000);
+
+}
+
+setInterval(sparkle,300);
 </script>
 
 </body>
